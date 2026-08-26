@@ -476,6 +476,7 @@ body {
         font-size: 2rem;
     }
 
+    /* Texto mantenido en justificado para móviles */
     .bio, 
     .project-info p {
         text-align: justify;
