@@ -1,3 +1,6 @@
+/* ==========================================
+   1. VARIABLES GLOBALES (:root)
+   ========================================== */
 :root {
     --bg-dark: #121013;
     --rose-gold: #E5B2A0;
@@ -11,6 +14,10 @@
     --font-body: 'Plus Jakarta Sans', sans-serif;
 }
 
+/* ==================================================
+   2. REGLAS BASE Y RESET CSS (MÁRGENES / RELLENOS, 
+   COMPORTAMIENTO DEL MODELO DE CAJA Y SCROLL
+   ==================================================*/
 * {
     margin: 0;
     padding: 0;
@@ -31,6 +38,9 @@ body {
     line-height: 1.6;
 }
 
+/* ===================================================
+   3. ILUMINACIÓN AMBIENTAL (EFECTO DE LUZ FLOTANTE)
+   =================================================== */
 .ambient-light-1, .ambient-light-2 {
     position: fixed;
     border-radius: 50%;
@@ -55,6 +65,9 @@ body {
     right: -100px;
 }
 
+/* ==========================================
+   4. NAVEGACIÓN PRINCIPAL (.glass-nav)
+   ========================================== */
 .glass-nav {
     position: relative; 
     width: 90%;
@@ -96,6 +109,9 @@ body {
     color: var(--rose-gold);
 }
 
+/* ============================================
+   5. ESTRUCTURA Y CONTENEDORES GENERALES
+   ============================================*/
 .main-wrapper {
     width: 100%;
     max-width: 1100px;
@@ -117,6 +133,9 @@ body {
     width: 100%;
 }
 
+/* ====================================================
+   6. SECCIÓN HERO (PRESENTACIÓN PERFIL Y BIOGRAFÍA)
+   ====================================================*/
 .hero-grid {
     display: grid;
     grid-template-columns: 280px 1fr;
@@ -188,6 +207,7 @@ body {
     font-weight: 600;
 }
 
+/* Botones de acción principal y secundario */
 .hero-action-btns {
     display: flex;
     flex-wrap: wrap;
@@ -234,6 +254,10 @@ body {
     background: var(--rose-gold-glow);
 }
 
+/* ==========================================
+   7. SECCIÓN DE HABILIDADES (SKILLS) 
+   PARA LISTAR TECNOLOGÍAS O DESTREZAS
+   ========================================== */
 .section-title {
     font-family: var(--font-heading);
     font-size: 1.8rem;
@@ -268,6 +292,9 @@ body {
     background: rgba(229, 178, 160, 0.05);
 }
 
+/* ============================================
+   8. SECCIÓN DE PROYECTOS (PORTAFOLIO)
+   ============================================*/
 .projects-asymmetric-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -302,6 +329,7 @@ body {
     transform: scale(1.08);
 }
 
+/* Capa de enlaces emergentes al pasar el cursor sobre un proyecto */
 .project-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -369,6 +397,66 @@ body {
     -webkit-user-select: none;
 }
 
+/* ========================================================================
+   9. SECCIÓN Y FORMULARIO DE CONTACTO (.contact-card / .contact-form)
+   ========================================================================*/
+.contact-card {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.contact-subtitle {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    margin-bottom: 25px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.contact-form label {
+    font-size: 0.85rem;
+    color: var(--rose-gold-light);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-form .form-input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 12px 16px;
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form .form-input:focus {
+    border-color: var(--rose-gold);
+}
+
+.contact-form textarea.form-input {
+    resize: vertical;
+}
+
+.contact-form .form-action {
+    margin-top: 10px;
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -376,6 +464,7 @@ body {
     align-items: center;
 }
 
+/* Redes sociales en formulario alternativo */
 .social-links-glow {
     display: flex;
     flex-direction: column;
@@ -413,6 +502,9 @@ body {
     border-color: var(--rose-gold);
 }
 
+/* ============================================
+   10. PIE DE PÁGINA (.footer-minimal)
+   ============================================ */
 .footer-minimal {
     text-align: center;
     padding: 30px;
@@ -420,10 +512,12 @@ body {
     color: var(--text-muted);
 }
 
-/* ==========================================
-   MEDIA QUERIES DE RESPONSIVIDAD
-   ========================================== */
+/* ========================================================
+   11. MEDIA QUERIES DE RESPONSIVIDAD
+   ADAPTACIONES DE DISEÑO PARA DESKTOP, MÓVIL Y TABLETS
+   ======================================================== */
 
+/* Laptops medianas y tablets en horizontal (<= 992px) */
 @media (max-width: 992px) {
     .hero-grid {
         grid-template-columns: 240px 1fr;
@@ -435,6 +529,7 @@ body {
     }
 }
 
+/* Tablets en vertical (<= 850px) */
 @media (max-width: 850px) {
     .glass-nav { 
         flex-direction: column; 
@@ -508,6 +603,7 @@ body {
     }
 }
 
+/* Teléfonos móviles (<= 480px) */
 @media (max-width: 480px) {
     .main-wrapper {
         padding: 0 12px;
