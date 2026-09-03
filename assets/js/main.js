@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 2. LÓGICA DE CAMBIO DE IDIOMA (ES / EN)
+    // 2. LÓGICA DE TRADUCCIÓN COMPLETA (ES / EN)
     // ==========================================
     const langBtn = document.getElementById('lang-toggle');
     const langText = document.getElementById('lang-text');
@@ -38,20 +38,64 @@ document.addEventListener('DOMContentLoaded', () => {
     if (langBtn && langText) {
         const translations = {
             es: {
+                "nav-logo": "MI PORTAFOLIO",
                 "nav-about": "Sobre Mí",
                 "nav-projects": "Proyectos",
+                "hero-tagline": "Ingeniería en Desarrollo de Software",
                 "hero-title": "Desarrolladora Full Stack",
+                "hero-bio": "Soy <strong>Jessica Angeles Resendiz Arroyo</strong>, Ingeniera especialista en el desarrollo de soluciones web y sistemas administrativos. Combino capacidad analítica, diseño cuidado y trabajo colaborativo, con experiencia en <strong>Java, Spring Boot, PHP, JavaScript y MySQL</strong>, además de certificación en <strong>Oracle Cloud e Inteligencia Artificial</strong>. Me enfoco en crear plataformas funcionales que optimizan procesos e impulsan el crecimiento organizacional.",
+                "btn-cv": "Descargar CV",
+                "btn-linkedin": "LinkedIn",
+                "btn-github": "GitHub",
                 "skills-title": "Pila Tecnológica",
                 "projects-title": "Proyectos Destacados",
-                "contact-title": "Contáctame"
+                "p1-cat": "PROYECTO BLOG DE PROGRAMACIÓN",
+                "p1-desc": "Blog informativo sobre desarrollo de software y programación web con arquitectura responsiva de 3 columnas, catálogo de conceptos técnicos, modales interactivos y formulario de contacto con alertas dinámicas.",
+                "p2-cat": "E-COMMERCE DEPORTIVO",
+                "p2-desc": "Plataforma web para la gestión y comunidad de skate, con catálogo de productos, sistema de registro e inicio de sesión, y una interfaz dinámica.",
+                "p3-cat": "REFACTORIZACIÓN DE BLOG",
+                "p3-title": "Refactorización del Blog ArroyoCode",
+                "p3-desc": "Portal educativo e informativo sobre desarrollo de software refactorizado con maquetación responsiva de tres columnas, catálogo interactivo de conceptos técnicos, integración de modales explicativos, hoja de ruta temática y formulario de contacto con validación y alertas dinámicas descartables.",
+                "p4-cat": "E-COMMERCE DE COMPONENTES ELECTRÓNICOS",
+                "p4-desc": "Plataforma e-commerce para la comercialización de componentes electrónicos refactorizada con maquetación responsiva de tres columnas, catálogo interactivo con filtrado dinámico por categoría, marca y rango de precios, integración de modales con especificaciones técnicas detalladas, hoja de ruta para proyectos de electrónica y formulario de contacto con validación y alertas dinámicas descartables.",
+                "p5-cat": "E-COMMERCE FLORERÍA",
+                "p5-desc": "Plataforma web para la comercialización y venta de arreglos florales, ramos y detalles especiales, con catálogo dinámico de productos, navegación intuitiva y una interfaz optimizada para compras y cotizaciones en línea.",
+                "contact-title": "Contáctame",
+                "contact-subtitle": "Déjame tu correo y tu mensaje, y nos comunicaremos contigo a la brevedad.",
+                "label-email": "Tu correo electrónico",
+                "label-message": "Tu mensaje",
+                "btn-send": "Enviar Mensaje",
+                "footer": "&copy; 2026 Desarrollado con elegancia & tecnología. Todos los derechos reservados."
             },
             en: {
+                "nav-logo": "MY PORTFOLIO",
                 "nav-about": "About Me",
                 "nav-projects": "Projects",
+                "hero-tagline": "Software Engineering",
                 "hero-title": "Full Stack Developer",
+                "hero-bio": "I am <strong>Jessica Angeles Resendiz Arroyo</strong>, a Software Engineer specializing in web solutions and administrative systems development. I combine analytical skills, careful design, and teamwork, with experience in <strong>Java, Spring Boot, PHP, JavaScript, and MySQL</strong>, along with certifications in <strong>Oracle Cloud and Artificial Intelligence</strong>. I focus on building functional platforms that streamline processes and drive organizational growth.",
+                "btn-cv": "Download CV",
+                "btn-linkedin": "LinkedIn",
+                "btn-github": "GitHub",
                 "skills-title": "Tech Stack",
                 "projects-title": "Featured Projects",
-                "contact-title": "Contact Me"
+                "p1-cat": "PROGRAMMING BLOG PROJECT",
+                "p1-desc": "Informative blog about software development and web programming featuring a responsive 3-column architecture, technical concepts catalog, interactive modals, and contact form with dynamic alerts.",
+                "p2-cat": "SPORTS E-COMMERCE",
+                "p2-desc": "Web platform for skate community and management, featuring product catalog, registration and login system, and a dynamic interface.",
+                "p3-cat": "BLOG REFACTORING",
+                "p3-title": "ArroyoCode Blog Refactoring",
+                "p3-desc": "Educational and informative portal on software development refactored with a responsive three-column layout, interactive catalog of technical concepts, integration of explanatory modals, roadmap, and contact form with validation.",
+                "p4-cat": "ELECTRONIC COMPONENTS E-COMMERCE",
+                "p4-desc": "E-commerce platform for electronic components refactored with responsive three-column layout, interactive catalog with dynamic filtering by category, brand, and price range, technical specs modals, and validation contact form.",
+                "p5-cat": "FLOWER SHOP E-COMMERCE",
+                "p5-desc": "Web platform for selling floral arrangements, bouquets, and special gifts, with a dynamic product catalog, intuitive navigation, and an optimized interface for online shopping.",
+                "contact-title": "Contact Me",
+                "contact-subtitle": "Leave your email and message, and I'll get back to you as soon as possible.",
+                "label-email": "Your email address",
+                "label-message": "Your message",
+                "btn-send": "Send Message",
+                "footer": "&copy; 2026 Developed with elegance & technology. All rights reserved."
             }
         };
 
@@ -61,11 +105,24 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
                 if (translations[lang] && translations[lang][key]) {
-                    element.textContent = translations[lang][key];
+                    const icon = element.querySelector('i');
+                    if (icon) {
+                        element.innerHTML = `${icon.outerHTML} ${translations[lang][key]}`;
+                    } else {
+                        element.innerHTML = translations[lang][key];
+                    }
                 }
             });
 
-            // Muestra EN si el idioma actual es Español (para indicar el cambio) y viceversa
+            // Cambiar placeholders del formulario
+            const emailInput = document.getElementById('user-email');
+            const messageInput = document.getElementById('user-message');
+            if (emailInput && messageInput) {
+                emailInput.placeholder = lang === 'es' ? 'ejemplo@correo.com' : 'example@mail.com';
+                messageInput.placeholder = lang === 'es' ? 'Escribe aquí tu mensaje...' : 'Write your message here...';
+            }
+
+            // Indicador del botón (Muestra ES cuando está en EN y viceversa)
             langText.textContent = lang === 'es' ? 'EN' : 'ES';
         }
 

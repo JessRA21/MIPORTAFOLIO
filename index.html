@@ -14,64 +14,51 @@
 <body>
 
     <!-- Fondo de gradientes flotantes en movimiento -->
-
     <div class="ambient-light-1"></div>
     <div class="ambient-light-2"></div>
 
     <!-- Navegación Flotante -->
+    <nav class="glass-nav">
+        <div class="nav-logo" data-i18n="nav-logo">MI PORTAFOLIO</div>
+        <div class="nav-links">
+            <button id="theme-toggle" class="nav-btn theme-btn" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+                <i id="theme-icon" class="bi bi-moon-stars-fill btn-icon"></i>
+            </button>
 
-   <nav class="glass-nav">
-    <div class="nav-logo">MI PORTAFOLIO</div>
-    <div class="nav-links">
-        <!-- 1. Botón de Tema (Verifica id="theme-toggle" e id="theme-icon") -->
-        <button id="theme-toggle" class="nav-btn theme-btn" type="button" aria-label="Cambiar tema" title="Cambiar tema">
-            <i id="theme-icon" class="bi bi-moon-stars-fill btn-icon"></i>
-        </button>
+            <button id="lang-toggle" class="nav-btn lang-btn" type="button" aria-label="Cambiar idioma" title="Translate">
+                <i class="bi bi-globe btn-icon"></i>
+                <span id="lang-text">EN</span>
+            </button>
 
-        <!-- 2. Botón de Idioma (Verifica id="lang-toggle" e id="lang-text") -->
-        <button id="lang-toggle" class="nav-btn lang-btn" type="button" aria-label="Cambiar idioma" title="Translate">
-            <i class="bi bi-globe btn-icon"></i>
-            <span id="lang-text">EN</span>
-        </button>
-
-        <!-- Enlaces con atributo data-i18n -->
-        <a href="#about" data-i18n="nav-about">Sobre Mí</a>
-        <a href="#projects" data-i18n="nav-projects">Proyectos</a>
-    </div>
-</nav>
+            <a href="#about" data-i18n="nav-about">Sobre Mí</a>
+            <a href="#projects" data-i18n="nav-projects">Proyectos</a>
+        </div>
+    </nav>
 
     <div class="main-wrapper">
         
         <!-- Información Sobre Mí -->
-
         <section id="about" class="glass-card hero-card">
             <div class="hero-grid">
                 <div class="profile-frame">
                     <img src="assets/img/Mi Foto de Perfil.jpg" alt="Foto de perfil" class="profile-img">
                 </div>
                 <div class="hero-text">
-                    <span class="tagline">Ingeniería en Desarrollo de Software</span>
-                    <h1>Desarrolladora Full Stack</h1>
-                    <p class="bio">
+                    <span class="tagline" data-i18n="hero-tagline">Ingeniería en Desarrollo de Software</span>
+                    <h1 data-i18n="hero-title">Desarrolladora Full Stack</h1>
+                    <p class="bio" data-i18n="hero-bio">
                         Soy <strong> Jessica Angeles Resendiz Arroyo </strong>, Ingeniera especialista en el desarrollo de soluciones web y sistemas administrativos. Combino capacidad analítica, diseño cuidado y trabajo colaborativo, con experiencia en <strong>Java, Spring Boot, PHP, JavaScript y MySQL</strong>, además de certificación en <strong>Oracle Cloud e Inteligencia Artificial</strong>. Me enfoco en crear plataformas funcionales que optimizan procesos e impulsan el crecimiento organizacional.
                     </p>
                     <div class="hero-action-btns">
-
-                        <!-- Botón a CV con descarga habilitada -->
-
-                        <a href="assets/PDF/CV - Jessica Angeles Resendiz Arroyo.pdf" class="btn-primary-rose" download="CV - Jessica Angeles Resendiz Arroyo">
+                        <a href="assets/PDF/CV - Jessica Angeles Resendiz Arroyo.pdf" class="btn-primary-rose" download="CV - Jessica Angeles Resendiz Arroyo" data-i18n="btn-cv">
                             <i class="bi bi-file-earmark-person-fill"></i> Descargar CV
                         </a>
 
-                        <!-- Botón a LinkedIn -->
-
-                        <a href="https://www.linkedin.com/in/jessica-angeles-ra" class="btn-primary-rose" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/jessica-angeles-ra" class="btn-primary-rose" target="_blank" rel="noopener noreferrer" data-i18n="btn-linkedin">
                             <i class="bi bi-linkedin"></i> LinkedIn
                         </a>
 
-                        <!-- Botón a GitHub -->
-
-                        <a href="https://github.com/JessRA21" class="btn-outline-rose" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/JessRA21" class="btn-outline-rose" target="_blank" rel="noopener noreferrer" data-i18n="btn-github">
                             <i class="bi bi-github"></i> GitHub
                         </a>
                     </div>
@@ -80,9 +67,8 @@
         </section>
 
         <!-- Pila Tecnológica -->
-
         <section id="skills" class="glass-card skills-card">
-            <h2 class="section-title"> Pila Tecnológica </h2>
+            <h2 class="section-title" data-i18n="skills-title"> Pila Tecnológica </h2>
             <div class="skills-pill-container">
                 <div class="skill-pill"><i class="bi bi-code-slash"></i> Java</div>
                 <div class="skill-pill"><i class="bi bi-flower1"></i> Spring Boot</div>
@@ -95,14 +81,12 @@
         </section>
 
         <!-- Proyectos con Tarjetas Interactivas -->
-
         <section id="projects" class="projects-section">
-            <h2 class="section-title text-center"> Proyectos Destacados </h2>
+            <h2 class="section-title text-center" data-i18n="projects-title"> Proyectos Destacados </h2>
             
             <div class="projects-asymmetric-grid">
                 
                 <!-- Proyecto 1 -->
-
                 <article class="glass-card project-card-modern">
                     <div class="project-img-wrapper">
                         <img src="assets/img/ArroyoCode.jpg" alt="Proyecto Blog de Programación">
@@ -112,9 +96,9 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <span class="project-category"> Proyecto Blog de Programación </span>
+                        <span class="project-category" data-i18n="p1-cat"> PROYECTO BLOG DE PROGRAMACIÓN </span>
                         <h3> ArroyoCode </h3>
-                        <p> 
+                        <p data-i18n="p1-desc"> 
                             Blog informativo sobre desarrollo de software y programación web con arquitectura responsiva 
                             de 3 columnas, catálogo de conceptos técnicos, modales interactivos y formulario de contacto 
                             con alertas dinámicas. 
@@ -130,7 +114,6 @@
                 </article>
 
                 <!-- Proyecto 2 -->
-
                 <article class="glass-card project-card-modern">
                     <div class="project-img-wrapper">
                         <img src="assets/img/SkateBros.jpg" alt="SkateBros">
@@ -140,9 +123,9 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <span class="project-category"> E-COMMERCE DEPORTIVO </span>
+                        <span class="project-category" data-i18n="p2-cat"> E-COMMERCE DEPORTIVO </span>
                         <h3> SkateBros </h3>
-                        <p> 
+                        <p data-i18n="p2-desc"> 
                             Plataforma web para la gestión y comunidad de skate, con catálogo de productos, sistema de 
                             registro e inicio de sesión, y una interfaz dinámica. 
                         </p>
@@ -157,7 +140,6 @@
                 </article>
 
                 <!-- Proyecto 3 -->
-
                 <article class="glass-card project-card-modern">
                     <div class="project-img-wrapper">
                         <img src="assets/img/Refactorización del Blog ArroyoCode.jpg" alt="Refactorización del Blog ArroyoCode">
@@ -167,9 +149,9 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <span class="project-category"> Refactorización de Blog </span>
-                        <h3> Refactorización del Blog ArroyoCode </h3>
-                        <p> 
+                        <span class="project-category" data-i18n="p3-cat"> REFACTORIZACIÓN DE BLOG </span>
+                        <h3 data-i18n="p3-title"> Refactorización del Blog ArroyoCode </h3>
+                        <p data-i18n="p3-desc"> 
                             Portal educativo e informativo sobre desarrollo de software refactorizado con maquetación
                             responsiva de tres columnas, catálogo interactivo de conceptos técnicos, integración de modales 
                             explicativos, hoja de ruta temática y formulario de contacto con validación y alertas dinámicas 
@@ -186,7 +168,6 @@
                 </article>
 
                 <!-- Proyecto 4 -->
-
                 <article class="glass-card project-card-modern">
                     <div class="project-img-wrapper">
                         <img src="assets/img/Chispazo.jpg" alt="Chispazo">
@@ -196,9 +177,9 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <span class="project-category"> E-COMMERCE DE COMPONENTES ELECTRÓNICOS </span>
+                        <span class="project-category" data-i18n="p4-cat"> E-COMMERCE DE COMPONENTES ELECTRÓNICOS </span>
                         <h3> Chispazo </h3>
-                        <p> 
+                        <p data-i18n="p4-desc"> 
                             Plataforma e-commerce para la comercialización de componentes electrónicos refactorizada con 
                             maquetación responsiva de tres columnas, catálogo interactivo con filtrado dinámico por categoría, 
                             marca y rango de precios, integración de modales con especificaciones técnicas detalladas, hoja de 
@@ -216,7 +197,6 @@
                 </article>
 
                 <!-- Proyecto 5 -->
-
                 <article class="glass-card project-card-modern">
                     <div class="project-img-wrapper">
                         <img src="assets/img/Florería LOS ARROYO'S.jpg" alt="Florería LOS ARROYO'S">
@@ -226,9 +206,9 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <span class="project-category"> E-COMMERCE FLORERÍA </span>
-                        <h3> Florería LOS ARROYO'S  </h3>
-                        <p> 
+                        <span class="project-category" data-i18n="p5-cat"> E-COMMERCE FLORERÍA </span>
+                        <h3> Florería LOS ARROYO'S </h3>
+                        <p data-i18n="p5-desc"> 
                             Plataforma web para la comercialización y venta de arreglos florales, ramos y detalles especiales, 
                             con catálogo dinámico de productos, navegación intuitiva y una interfaz optimizada para compras y 
                             cotizaciones en línea.
@@ -245,27 +225,25 @@
 
             </div>
         </section>
-    </div>
 
-    <!-- Sección de Contacto -->
-
+        <!-- Sección de Contacto -->
         <section id="contact" class="glass-card contact-card">
-            <h2 class="section-title text-center"> Contáctame </h2>
-            <p class="contact-subtitle text-center"> Déjame tu correo y tu mensaje, y nos comunicaremos contigo a la brevedad. </p>
+            <h2 class="section-title text-center" data-i18n="contact-title"> Contáctame </h2>
+            <p class="contact-subtitle text-center" data-i18n="contact-subtitle"> Déjame tu correo y tu mensaje, y nos comunicaremos contigo a la brevedad. </p>
             
             <form class="contact-form">
                 <div class="form-group">
-                    <label for="user-email"><i class="bi bi-envelope"></i> Tu correo electrónico</label>
+                    <label for="user-email" data-i18n="label-email"><i class="bi bi-envelope"></i> Tu correo electrónico</label>
                     <input type="email" id="user-email" name="email" class="form-input" placeholder="ejemplo@correo.com" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="user-message"><i class="bi bi-chat-left-text"></i> Tu mensaje</label>
+                    <label for="user-message" data-i18n="label-message"><i class="bi bi-chat-left-text"></i> Tu mensaje</label>
                     <textarea id="user-message" name="message" class="form-input" rows="5" placeholder="Escribe aquí tu mensaje..." required></textarea>
                 </div>
 
                 <div class="form-action text-center">
-                    <button type="submit" class="btn-primary-rose">
+                    <button type="submit" class="btn-primary-rose" data-i18n="btn-send">
                         <i class="bi bi-send-fill"></i> Enviar Mensaje
                     </button>
                 </div>
@@ -275,10 +253,9 @@
     </div>
 
     <footer class="footer-minimal">
-        <p>&copy; 2026 Desarrollado con elegancia & tecnología. Todos los derechos reservados.</p>
+        <p data-i18n="footer">&copy; 2026 Desarrollado con elegancia & tecnología. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Al final de tu HTML, antes del </body> -->
     <script src="assets/js/main.js"></script>
 
 </body>
