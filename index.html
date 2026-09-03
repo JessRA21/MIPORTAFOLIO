@@ -20,13 +20,25 @@
 
     <!-- Navegación Flotante -->
 
-    <nav class="glass-nav">
-        <div class="nav-logo"> MI PORTAFOLIO</div>
-        <div class="nav-links">
-            <a href="#about">Sobre Mí</a>
-            <a href="#projects">Proyectos</a>
-        </div>
-    </nav>
+   <nav class="glass-nav">
+    <div class="nav-logo">MI PORTAFOLIO</div>
+    <div class="nav-links">
+        <!-- 1. Botón de Tema (Verifica id="theme-toggle" e id="theme-icon") -->
+        <button id="theme-toggle" class="nav-btn theme-btn" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+            <i id="theme-icon" class="bi bi-moon-stars-fill btn-icon"></i>
+        </button>
+
+        <!-- 2. Botón de Idioma (Verifica id="lang-toggle" e id="lang-text") -->
+        <button id="lang-toggle" class="nav-btn lang-btn" type="button" aria-label="Cambiar idioma" title="Translate">
+            <i class="bi bi-globe btn-icon"></i>
+            <span id="lang-text">EN</span>
+        </button>
+
+        <!-- Enlaces con atributo data-i18n -->
+        <a href="#about" data-i18n="nav-about">Sobre Mí</a>
+        <a href="#projects" data-i18n="nav-projects">Proyectos</a>
+    </div>
+</nav>
 
     <div class="main-wrapper">
         
@@ -177,10 +189,10 @@
 
                 <article class="glass-card project-card-modern">
                     <div class="project-img-wrapper">
-                        <img src="assets/img/" alt="Chispazo">
+                        <img src="assets/img/Chispazo.jpg" alt="Chispazo">
                         <div class="project-overlay">
-                            <a href="https://github.com/Miguel-ASC/Chispazo" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver repositorio del proyecto"><i class="bi bi-github"></i></a>
-                            <a href="" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver sitio demo"><i class="bi bi-layout-text-window-reverse"></i></a>
+                            <a href="https://github.com/JessRA21/Chispazo" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver repositorio del proyecto"><i class="bi bi-github"></i></a>
+                            <a href="https://jessra21.github.io/Chispazo/" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver sitio demo"><i class="bi bi-layout-text-window-reverse"></i></a>
                         </div>
                     </div>
                     <div class="project-info">
@@ -202,6 +214,35 @@
                         </div>
                     </div>
                 </article>
+
+                <!-- Proyecto 5 -->
+
+                <article class="glass-card project-card-modern">
+                    <div class="project-img-wrapper">
+                        <img src="assets/img/Florería LOS ARROYO'S.jpg" alt="Florería LOS ARROYO'S">
+                        <div class="project-overlay">
+                            <a href="https://github.com/JessRA21/FLORERIA-LOS-ARROYO-S" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver repositorio del proyecto"><i class="bi bi-github"></i></a>
+                            <a href="https://jessra21.github.io/FLORERIA-LOS-ARROYO-S/" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver sitio demo"><i class="bi bi-layout-text-window-reverse"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category"> E-COMMERCE FLORERÍA </span>
+                        <h3> Florería LOS ARROYO'S  </h3>
+                        <p> 
+                            Plataforma web para la comercialización y venta de arreglos florales, ramos y detalles especiales, 
+                            con catálogo dinámico de productos, navegación intuitiva y una interfaz optimizada para compras y 
+                            cotizaciones en línea.
+                        </p>
+                        <div class="tech-tags">
+                            <span> HTML5 </span>
+                            <span> CSS3 </span>
+                            <span> JavaScript </span>
+                            <span> Bootstrap 5 </span>
+                            <span> GitHub </span>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </section>
     </div>
@@ -236,6 +277,9 @@
     <footer class="footer-minimal">
         <p>&copy; 2026 Desarrollado con elegancia & tecnología. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Al final de tu HTML, antes del </body> -->
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>

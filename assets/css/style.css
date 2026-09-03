@@ -640,3 +640,129 @@ body {
         padding: 16px;
     }
 }
+
+/* ====================================================
+   ESTILOS DE BOTONES DE NAVEGACIÓN (TEMA Y IDIOMA)
+   ==================================================== */
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(230, 180, 170, 0.25); /* Borde fino sutil */
+    color: #ffffff;
+    border-radius: 50px; /* Bordes redondeados en forma de cápsula */
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(230, 180, 170, 0.5);
+    transform: translateY(-1px);
+}
+
+/* Botón circular exclusivo para el tema */
+.theme-btn {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.theme-btn i {
+    font-size: 0.95rem;
+    line-height: 1;
+}
+
+/* Color dorado brillante cuando se activa el sol */
+.bi-sun-fill {
+    color: #ffc107;
+}
+
+[data-theme="light"] {
+    --bg-dark: #E2DFE3;             /* Fondo gris neutro mate (menos brillante) */
+    --text-main: #231E24;
+    --text-muted: #5C545A;
+    --rose-gold: #9E523A;
+    --rose-gold-light: #231E24;
+    --glass-bg: rgba(245, 243, 245, 0.85); /* Tarjetas ligeramente ajustadas para contrastar */
+    --glass-border: rgba(158, 82, 58, 0.25);
+}
+
+[data-theme="light"] body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+}
+
+/* Encabezados y títulos generales */
+[data-theme="light"] .hero-text h1,
+[data-theme="light"] .section-title,
+[data-theme="light"] .project-info h3 {
+    color: #231E24;
+}
+
+/* Párrafos y descripciones */
+[data-theme="light"] .bio,
+[data-theme="light"] .project-info p,
+[data-theme="light"] .contact-subtitle {
+    color: #4A4247;
+}
+
+/* Tarjetas y Contenedores Glass */
+[data-theme="light"] .glass-card,
+[data-theme="light"] .glass-nav {
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Enlaces de Navegación */
+[data-theme="light"] .nav-links a {
+    color: #231E24;
+}
+
+[data-theme="light"] .nav-links a:hover {
+    color: var(--rose-gold);
+}
+
+/* Pastillas de Habilidades (Skills) */
+[data-theme="light"] .skill-pill {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.12);
+    color: #231E24;
+}
+
+[data-theme="light"] .skill-pill:hover {
+    border-color: var(--rose-gold);
+    color: var(--rose-gold);
+}
+
+/* Inputs del Formulario de Contacto */
+[data-theme="light"] .contact-form .form-input {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.15);
+    color: #231E24;
+}
+
+[data-theme="light"] .contact-form label {
+    color: #231E24;
+}
+
+/* Botones de Navegación */
+[data-theme="light"] .nav-btn {
+    color: #231E24;
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.15);
+}
