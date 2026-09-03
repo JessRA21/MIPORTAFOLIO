@@ -134,4 +134,41 @@ document.addEventListener('DOMContentLoaded', () => {
             applyLanguage(currentLang);
         });
     }
+
+    // ==========================================
+    // 3. ENVÍO DEL FORMULARIO CON EMAILJS
+    // ==========================================
+    // Reemplaza 'TU_PUBLIC_KEY' por la clave pública que copiaste de tu cuenta EmailJS
+    emailjs.init("pmJJUcYOx2BkDzWOf");
+
+    const contactForm = document.getElementById('contact-form');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const serviceID = 'service_3c8uemv';
+            const templateID = 'template_svpzk8m';
+
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
+
+            emailjs.sendForm(serviceID, templateID, contactForm)
+                .then(() => {
+                    alert('¡Mensaje enviado con éxito!');
+                    contactForm.reset();
+                })
+                .catch((err) => {
+                    alert('Ocurrió un error al enviar el mensaje. Por favor intenta de nuevo.');
+                    console.error('EmailJS Error:', err);
+                })
+                .finally(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                });
+        });
+    }
 });

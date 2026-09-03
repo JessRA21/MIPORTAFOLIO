@@ -231,10 +231,10 @@
             <h2 class="section-title text-center" data-i18n="contact-title"> Contáctame </h2>
             <p class="contact-subtitle text-center" data-i18n="contact-subtitle"> Déjame tu correo y tu mensaje, y nos comunicaremos contigo a la brevedad. </p>
             
-            <form class="contact-form">
+            <form id="contact-form" class="contact-form">
                 <div class="form-group">
                     <label for="user-email" data-i18n="label-email"><i class="bi bi-envelope"></i> Tu correo electrónico</label>
-                    <input type="email" id="user-email" name="email" class="form-input" placeholder="ejemplo@correo.com" required>
+                    <input type="email" id="user-email" name="user_email" class="form-input" placeholder="ejemplo@correo.com" required>
                 </div>
 
                 <div class="form-group">
@@ -243,7 +243,7 @@
                 </div>
 
                 <div class="form-action text-center">
-                    <button type="submit" class="btn-primary-rose" data-i18n="btn-send">
+                    <button type="submit" id="btn-submit" class="btn-primary-rose" data-i18n="btn-send">
                         <i class="bi bi-send-fill"></i> Enviar Mensaje
                     </button>
                 </div>
@@ -256,6 +256,10 @@
         <p data-i18n="footer">&copy; 2026 Desarrollado con elegancia & tecnología. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- SDK de EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- Tu archivo JS principal -->
     <script src="assets/js/main.js"></script>
 
 </body>
