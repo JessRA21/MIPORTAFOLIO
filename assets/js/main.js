@@ -60,8 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 "p4-desc": "Plataforma e-commerce para la comercialización de componentes electrónicos refactorizada con maquetación responsiva de tres columnas, catálogo interactivo con filtrado dinámico por categoría, marca y rango de precios, integración de modales con especificaciones técnicas detalladas, hoja de ruta para proyectos de electrónica y formulario de contacto con validación y alertas dinámicas descartables.",
                 "p5-cat": "E-COMMERCE FLORERÍA",
                 "p5-desc": "Plataforma web para la comercialización y venta de arreglos florales, ramos y detalles especiales, con catálogo dinámico de productos, navegación intuitiva y una interfaz optimizada para compras y cotizaciones en línea.",
+                
+                /* Traducciones de la sección de contacto */
+                "contact-quote-tagline": "HABLEMOS DE PROYECTOS",
+                "contact-quote-title": "Transformemos ideas complejas en código eficiente y elegante.",
+                "contact-quote-text": "Si buscas una desarrolladora Full Stack apasionada por la innovación, las buenas prácticas y la optimización de procesos, ¡me encantaría colaborar contigo!",
+                "contact-response-time": "Te responderé a la brevedad posible",
                 "contact-title": "Contáctame",
-                "contact-subtitle": "Déjame tu correo y tu mensaje, y nos comunicaremos contigo a la brevedad.",
+                "contact-subtitle": "Comparte tu correo electrónico y tu mensaje aquí para empezar a colaborar.",
                 "label-email": "Tu correo electrónico",
                 "label-message": "Tu mensaje",
                 "btn-send": "Enviar Mensaje",
@@ -90,8 +96,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 "p4-desc": "E-commerce platform for electronic components refactored with responsive three-column layout, interactive catalog with dynamic filtering by category, brand, and price range, technical specs modals, and validation contact form.",
                 "p5-cat": "FLOWER SHOP E-COMMERCE",
                 "p5-desc": "Web platform for selling floral arrangements, bouquets, and special gifts, with a dynamic product catalog, intuitive navigation, and an optimized interface for online shopping.",
+                
+                /* Traducciones de la sección de contacto */
+                "contact-quote-tagline": "LET'S TALK PROJECTS",
+                "contact-quote-title": "Let's transform complex ideas into efficient and elegant code.",
+                "contact-quote-text": "If you are looking for a Full Stack developer passionate about innovation, best practices, and process optimization, I would love to collaborate with you!",
+                "contact-response-time": "I'll get back to you as soon as possible",
                 "contact-title": "Contact Me",
-                "contact-subtitle": "Leave your email and message, and I'll get back to you as soon as possible.",
+                "contact-subtitle": "Share your email address and message here to start collaborating.",
                 "label-email": "Your email address",
                 "label-message": "Your message",
                 "btn-send": "Send Message",
@@ -138,7 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // 3. ENVÍO DEL FORMULARIO CON EMAILJS
     // ==========================================
-    // Reemplaza 'TU_PUBLIC_KEY' por la clave pública que copiaste de tu cuenta EmailJS
     emailjs.init("pmJJUcYOx2BkDzWOf");
 
     const contactForm = document.getElementById('contact-form');

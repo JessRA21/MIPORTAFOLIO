@@ -228,32 +228,60 @@
 
         <!-- Sección de Contacto -->
         <section id="contact" class="glass-card contact-card">
-            <h2 class="section-title text-center" data-i18n="contact-title"> Contáctame </h2>
-            <p class="contact-subtitle text-center" data-i18n="contact-subtitle"> Déjame tu correo y tu mensaje, y nos comunicaremos contigo a la brevedad. </p>
-            
-            <form id="contact-form" class="contact-form">
-                <div class="form-group">
-                    <label for="user-email" data-i18n="label-email"><i class="bi bi-envelope"></i> Tu correo electrónico</label>
-                    <input type="email" id="user-email" name="user_email" class="form-input" placeholder="ejemplo@correo.com" required>
+            <div class="contact-grid">
+                
+                <!-- Columna Izquierda: Frase e Invitación -->
+                <div class="contact-quote-wrapper">
+                    <span class="quote-tagline" data-i18n="contact-quote-tagline">HABLEMOS DE PROYECTOS</span>
+                    <h2 class="quote-title" data-i18n="contact-quote-title"> Transformemos ideas complejas en código eficiente y elegante. </h2>
+                    <p class="quote-text" data-i18n="contact-quote-text">
+                        Si buscas una desarrolladora Full Stack apasionada por la innovación, las buenas prácticas y la optimización de procesos, ¡me encantaría colaborar contigo!
+                    </p>
+                    
+                    <div class="contact-direct-info">
+                        <div class="info-item">
+                            <i class="bi bi-chat-quote-fill"></i>
+                            <span data-i18n="contact-response-time"> Te responderé a la brevedad posible. </span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="user-message" data-i18n="label-message"><i class="bi bi-chat-left-text"></i> Tu mensaje</label>
-                    <textarea id="user-message" name="message" class="form-input" rows="5" placeholder="Escribe aquí tu mensaje..." required></textarea>
-                </div>
+                <!-- Columna Derecha: Formulario -->
+                <div class="contact-form-wrapper">
+                    <h2 class="section-title text-start" data-i18n="contact-title"> Contáctame </h2>
+                    <p class="contact-subtitle text-start" data-i18n="contact-subtitle"> Comparte tu correo electrónico y tu mensaje aquí para empezar a colaborar. </p>
+                    
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="user-email" data-i18n="label-email"><i class="bi bi-envelope"></i> Tu correo electrónico</label>
+                            <input type="email" id="user-email" name="user_email" class="form-input" placeholder="ejemplo@correo.com" required>
+                        </div>
 
-                <div class="form-action text-center">
-                    <button type="submit" id="btn-submit" class="btn-primary-rose" data-i18n="btn-send">
-                        <i class="bi bi-send-fill"></i> Enviar Mensaje
-                    </button>
+                        <div class="form-group">
+                            <label for="user-message" data-i18n="label-message"><i class="bi bi-chat-left-text"></i> Tu mensaje</label>
+                            <textarea id="user-message" name="message" class="form-input" rows="4" placeholder="Escribe aquí tu mensaje..." required></textarea>
+                        </div>
+
+                        <div class="form-action text-start">
+                            <button type="submit" id="btn-submit" class="btn-primary-rose" data-i18n="btn-send">
+                                <i class="bi bi-send-fill"></i> Enviar Mensaje
+                            </button>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
         </section>
-
     </div>
 
     <footer class="footer-minimal">
-        <p data-i18n="footer">&copy; 2026 Desarrollado con elegancia & tecnología. Todos los derechos reservados.</p>
+        <div class="row text-center small text-white-50 pt-1">
+            <div class="col-12 mb-1">
+                Desarrollado con <i class="bi bi-heart-fill text-danger mx-2"></i> por:
+            </div>
+            <div class="col-12" data-i18n="footer">
+                &copy; 2026 Desarrollado con elegancia & tecnología. Todos los derechos reservados.
+            </div>
+        </div>
     </footer>
 
     <!-- SDK de EmailJS -->
