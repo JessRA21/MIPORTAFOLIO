@@ -158,22 +158,31 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const serviceID = 'service_3c8uemv';
+            const serviceID = 'service_s5gyptr';
             const templateID = 'template_svpzk8m';
 
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerHTML;
+            const currentLang = localStorage.getItem('portfolio-lang') || 'es';
             
             submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
+            submitBtn.innerHTML = currentLang === 'es' 
+                ? '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...'
+                : '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
 
             emailjs.sendForm(serviceID, templateID, contactForm)
                 .then(() => {
-                    alert('¡Mensaje enviado con éxito!');
+                    const successMsg = currentLang === 'es' 
+                        ? '¡Mensaje enviado con éxito!' 
+                        : 'Message sent successfully!';
+                    alert(successMsg);
                     contactForm.reset();
                 })
                 .catch((err) => {
-                    alert('Ocurrió un error al enviar el mensaje. Por favor intenta de nuevo.');
+                    const errorMsg = currentLang === 'es' 
+                        ? 'Ocurrió un error al enviar el mensaje. Por favor intenta de nuevo.' 
+                        : 'An error occurred while sending the message. Please try again.';
+                    alert(errorMsg);
                     console.error('EmailJS Error:', err);
                 })
                 .finally(() => {
