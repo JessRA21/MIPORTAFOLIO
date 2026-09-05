@@ -1,5 +1,5 @@
 /* ==========================================
-   1. VARIABLES GLOBALES (:root)
+   VARIABLES GLOBALES (:root)
    ========================================== */
 :root {
     --bg-dark: #121013;
@@ -15,7 +15,7 @@
 }
 
 /* ==================================================
-   2. REGLAS BASE Y RESET CSS (MÁRGENES / RELLENOS, 
+   REGLAS BASE Y RESET CSS (MÁRGENES / RELLENOS, 
    COMPORTAMIENTO DEL MODELO DE CAJA Y SCROLL
    ==================================================*/
 * {
@@ -39,7 +39,7 @@ body {
 }
 
 /* ===================================================
-   3. ILUMINACIÓN AMBIENTAL (EFECTO DE LUZ FLOTANTE)
+   ILUMINACIÓN AMBIENTAL (EFECTO DE LUZ FLOTANTE)
    =================================================== */
 .ambient-light-1, .ambient-light-2 {
     position: fixed;
@@ -66,7 +66,7 @@ body {
 }
 
 /* ==========================================
-   4. NAVEGACIÓN PRINCIPAL (.glass-nav)
+   NAVEGACIÓN PRINCIPAL (.glass-nav)
    ========================================== */
 .glass-nav {
     position: relative; 
@@ -110,7 +110,7 @@ body {
 }
 
 /* ============================================
-   5. ESTRUCTURA Y CONTENEDORES GENERALES
+   ESTRUCTURA Y CONTENEDORES GENERALES
    ============================================*/
 .main-wrapper {
     width: 100%;
@@ -134,7 +134,7 @@ body {
 }
 
 /* ====================================================
-   6. SECCIÓN HERO (PRESENTACIÓN PERFIL Y BIOGRAFÍA)
+   SECCIÓN HERO (PRESENTACIÓN PERFIL Y BIOGRAFÍA)
    ====================================================*/
 .hero-grid {
     display: grid;
@@ -255,7 +255,7 @@ body {
 }
 
 /* ==========================================
-   7. SECCIÓN DE HABILIDADES (SKILLS) 
+   SECCIÓN DE HABILIDADES (SKILLS) 
    PARA LISTAR TECNOLOGÍAS O DESTREZAS
    ========================================== */
 .section-title {
@@ -293,7 +293,7 @@ body {
 }
 
 /* ============================================
-   8. SECCIÓN DE PROYECTOS (PORTAFOLIO)
+   SECCIÓN DE PROYECTOS (PORTAFOLIO)
    ============================================*/
 .projects-asymmetric-grid {
     display: grid;
@@ -398,7 +398,7 @@ body {
 }
 
 /* ========================================================================
-   9. SECCIÓN Y FORMULARIO DE CONTACTO (.contact-card / .contact-form)
+   SECCIÓN Y FORMULARIO DE CONTACTO (.contact-card / .contact-form)
    ========================================================================*/
 .contact-grid {
     display: grid;
@@ -523,7 +523,7 @@ textarea.form-input {
 }
 
 /* ============================================
-   10. PIE DE PÁGINA (.footer-minimal)
+   PIE DE PÁGINA (.footer-minimal)
    ============================================ */
 .footer-minimal {
     text-align: center;
@@ -538,7 +538,7 @@ textarea.form-input {
 }
 
 /* ========================================================
-   11. MEDIA QUERIES DE RESPONSIVIDAD
+   MEDIA QUERIES DE RESPONSIVIDAD
    ADAPTACIONES DE DISEÑO PARA DESKTOP, MÓVIL Y TABLETS
    ======================================================== */
 
@@ -790,4 +790,21 @@ textarea.form-input {
     color: #231E24;
     background: rgba(0, 0, 0, 0.05);
     border-color: rgba(0, 0, 0, 0.15);
+}
+
+/* ====================================================
+   ANULACIÓN DEL FONDO AZUL CLARO EN AUTOCOMPLETADO
+   ==================================================== */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #2b292e inset !important; /* Ajusta #2b292e al color exacto del fondo de tus inputs */
+    -webkit-text-fill-color: #ffffff !important; /* Color del texto cuando se autocompleta */
+    transition: background-color 5000s ease-in-out 0s;
 }

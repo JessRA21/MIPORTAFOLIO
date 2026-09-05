@@ -147,9 +147,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==========================================
-    // 3. ENVÍO DEL FORMULARIO CON EMAILJS
-    // ==========================================
+    // =====================================================
+    // 3. ENVÍO DEL FORMULARIO CON EMAILJS + VALIDACIONES ANTI-SPAM
+    // =====================================================
     emailjs.init("pmJJUcYOx2BkDzWOf");
 
     const contactForm = document.getElementById('contact-form');
@@ -158,12 +158,58 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
+            const emailInput = document.getElementById('user-email');
+            const emailValue = emailInput.value.trim().toLowerCase();
+            const currentLang = localStorage.getItem('portfolio-lang') || 'es';
+
+            // 1. RegEx de sintaxis estándar
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            // 2. RegEx para detectar escritura aleatoria de consonantes (5 o más consonantes seguidas)
+            const gibberishRegex = /[bcdfghjklmnpqrstvwxyz]{5,}/i;
+
+            // 3. Lista negra de dominios temporales/desechables comunes
+            const disposableDomains = [
+                'yopmail.com', 'mailinator.com', '10minutemail.com', 'guerrillamail.com', 
+                'tempmail.com', 'dispostable.com', 'trashmail.com', 'sharklasers.com'
+            ];
+
+            const emailUser = emailValue.split('@')[0] || '';
+            const emailDomain = emailValue.split('@')[1] || '';
+
+            // Validaciones secuenciales
+            if (!emailRegex.test(emailValue)) {
+                const msg = currentLang === 'es'
+                    ? 'Por favor, ingresa una dirección de correo electrónico válida.'
+                    : 'Please enter a valid email address.';
+                alert(msg);
+                emailInput.focus();
+                return;
+            }
+
+            if (disposableDomains.includes(emailDomain)) {
+                const msg = currentLang === 'es'
+                    ? 'No se permiten direcciones de correo temporales o desechables.'
+                    : 'Disposable email addresses are not allowed.';
+                alert(msg);
+                emailInput.focus();
+                return;
+            }
+
+            if (gibberishRegex.test(emailUser) || emailUser.length < 3) {
+                const msg = currentLang === 'es'
+                    ? 'Por favor, ingresa una dirección de correo real.'
+                    : 'Please enter a real email address.';
+                alert(msg);
+                emailInput.focus();
+                return;
+            }
+
             const serviceID = 'service_s5gyptr';
             const templateID = 'template_svpzk8m';
 
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerHTML;
-            const currentLang = localStorage.getItem('portfolio-lang') || 'es';
             
             submitBtn.disabled = true;
             submitBtn.innerHTML = currentLang === 'es' 
@@ -191,4 +237,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
         });
     }
+
 });
