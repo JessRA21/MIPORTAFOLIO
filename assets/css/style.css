@@ -679,7 +679,7 @@ textarea.form-input {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(230, 180, 170, 0.25); /* Borde fino sutil */
     color: #ffffff;
-    border-radius: 50px; /* Bordes redondeados en forma de cápsula */
+    border-radius: 50px;
     padding: 6px 14px;
     font-size: 0.85rem;
     font-weight: 600;
@@ -792,10 +792,9 @@ textarea.form-input {
     border-color: rgba(0, 0, 0, 0.15);
 }
 
-/* ====================================================
-   ANULACIÓN DEL FONDO AZUL CLARO EN AUTOCOMPLETADO
-   ==================================================== */
-
+/* ==================================================================
+   ANULACIÓN DEL AUTOCOMPLETADO (TEMA OSCURO - POR DEFECTO)
+   ================================================================== */
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
@@ -804,7 +803,25 @@ textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus,
 textarea:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px #2b292e inset !important; /* Ajusta #2b292e al color exacto del fondo de tus inputs */
-    -webkit-text-fill-color: #ffffff !important; /* Color del texto cuando se autocompleta */
-    transition: background-color 5000s ease-in-out 0s;
+    -webkit-box-shadow: 0 0 0 1000px #2b292e inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    caret-color: #ffffff !important;
+    transition: background-color 50000s ease-in-out 0s !important;
+}
+
+/* =================================================================
+   ANULACIÓN DEL AUTOCOMPLETADO (TEMA CLARO)
+   ================================================================= */
+[data-theme="light"] input:-webkit-autofill,
+[data-theme="light"] input:-webkit-autofill:hover, 
+[data-theme="light"] input:-webkit-autofill:focus, 
+[data-theme="light"] input:-webkit-autofill:active,
+[data-theme="light"] textarea:-webkit-autofill,
+[data-theme="light"] textarea:-webkit-autofill:hover,
+[data-theme="light"] textarea:-webkit-autofill:focus,
+[data-theme="light"] textarea:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #EBE8EC inset !important;
+    -webkit-text-fill-color: #231E24 !important;
+    caret-color: #231E24 !important;
+    transition: background-color 50000s ease-in-out 0s !important;
 }
