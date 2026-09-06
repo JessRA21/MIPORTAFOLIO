@@ -824,3 +824,23 @@ textarea:-webkit-autofill:active {
     caret-color: #231E24 !important;
     transition: background-color 50000s ease-in-out 0s !important;
 }
+
+/* ======================================================================
+   COLOR DE TEXTO DE SUGERENCIA (PLACEHOLDER - APARTADO CONTÁCTAME)
+   ====================================================================== */
+
+/* En Tema Claro: Gris medio suave que destaca pero no es chillante */
+[data-theme="light"] .form-input::placeholder,
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+    color: #6C636D !important;
+    opacity: 1;
+}
+
+/* En Tema Oscuro: Gris claro sutil para mantener el estilo místico */
+.form-input::placeholder,
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+    opacity: 1;
+}
