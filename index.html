@@ -32,204 +32,419 @@
 
             <a href="#about" data-i18n="nav-about">Sobre Mí</a>
             <a href="#projects" data-i18n="nav-projects">Proyectos</a>
+            <a href="#certificates" data-i18n="nav-certs">Certificaciones</a>
         </div>
     </nav>
 
     <div class="main-wrapper">
-        
-        <!-- Información Sobre Mí -->
-        <section id="about" class="glass-card hero-card">
-            <div class="hero-grid">
+
+        <!-- COLUMNA IZQUIERDA FIJA: Perfil -->
+        <aside class="sidebar">
+            <div class="glass-card profile-card">
                 <div class="profile-frame">
                     <img src="assets/img/Mi Foto de Perfil.jpg" alt="Foto de perfil" class="profile-img">
                 </div>
+
                 <div class="hero-text">
                     <span class="tagline" data-i18n="hero-tagline">Ingeniería en Desarrollo de Software</span>
                     <h1 data-i18n="hero-title">Desarrolladora Full Stack</h1>
-                    <p class="bio" data-i18n="hero-bio">
-                        Soy <strong> Jessica Angeles Resendiz Arroyo </strong>, Ingeniera especialista en el desarrollo de soluciones web y sistemas administrativos. Combino capacidad analítica, diseño cuidado y trabajo colaborativo, con experiencia en <strong>Java, Spring Boot, PHP, JavaScript y MySQL</strong>, además de certificación en <strong>Oracle Cloud e Inteligencia Artificial</strong>. Me enfoco en crear plataformas funcionales que optimizan procesos e impulsan el crecimiento organizacional.
-                    </p>
-                    <div class="hero-action-btns">
-                        <a href="assets/PDF/CV - Jessica Angeles Resendiz Arroyo.pdf" class="btn-primary-rose" download="CV - Jessica Angeles Resendiz Arroyo" data-i18n="btn-cv">
-                            <i class="bi bi-file-earmark-person-fill"></i> Descargar CV
-                        </a>
+                </div>
 
-                        <a href="https://www.linkedin.com/in/jessica-angeles-ra" class="btn-primary-rose" target="_blank" rel="noopener noreferrer" data-i18n="btn-linkedin">
-                            <i class="bi bi-linkedin"></i> LinkedIn
-                        </a>
+                <div class="hero-action-btns">
+                    <a href="assets/PDF/CV - Jessica Angeles Resendiz Arroyo.pdf" class="btn-primary-rose" download="CV - Jessica Angeles Resendiz Arroyo" data-i18n="btn-cv">
+                        <i class="bi bi-file-earmark-person-fill"></i> Descargar CV
+                    </a>
 
-                        <a href="https://github.com/JessRA21" class="btn-outline-rose" target="_blank" rel="noopener noreferrer" data-i18n="btn-github">
-                            <i class="bi bi-github"></i> GitHub
-                        </a>
-                    </div>
+                    <a href="https://www.linkedin.com/in/jessica-angeles-ra" class="btn-primary-rose" target="_blank" rel="noopener noreferrer" data-i18n="btn-linkedin">
+                        <i class="bi bi-linkedin"></i> LinkedIn
+                    </a>
+
+                    <a href="https://github.com/JessRA21" class="btn-outline-rose" target="_blank" rel="noopener noreferrer" data-i18n="btn-github">
+                        <i class="bi bi-github"></i> GitHub
+                    </a>
                 </div>
             </div>
-        </section>
+        </aside>
 
-        <!-- Pila Tecnológica -->
-        <section id="skills" class="glass-card skills-card">
-            <h2 class="section-title" data-i18n="skills-title"> Pila Tecnológica </h2>
-            <div class="skills-pill-container">
-                <div class="skill-pill"><i class="bi bi-code-slash"></i> Java</div>
-                <div class="skill-pill"><i class="bi bi-flower1"></i> Spring Boot</div>
-                <div class="skill-pill"><i class="bi bi-filetype-php"></i> PHP</div>
-                <div class="skill-pill"><i class="bi bi-database"></i> MySQL</div>
-                <div class="skill-pill"><i class="bi bi-filetype-js"></i> JavaScript</div>
-                <div class="skill-pill"><i class="bi bi-bootstrap"></i> Bootstrap 5</div>
-                <div class="skill-pill"><i class="bi bi-git"></i> Git & GitHub</div>
-            </div>
-        </section>
+        <!-- COLUMNA DERECHA: Contenido -->
+        <div class="content-column">
 
-        <!-- Proyectos con Tarjetas Interactivas -->
-        <section id="projects" class="projects-section">
-            <h2 class="section-title text-center" data-i18n="projects-title"> Proyectos Destacados </h2>
-            
-            <div class="projects-asymmetric-grid">
-                
-                <!-- Proyecto 1 -->
-                <article class="glass-card project-card-modern">
-                    <div class="project-img-wrapper">
-                        <img src="assets/img/ArroyoCode.jpg" alt="Proyecto Blog de Programación">
-                        <div class="project-overlay">
-                            <a href="https://github.com/JessRA21/InfoCode-JessicaArroyo" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver repositorio del proyecto"><i class="bi bi-github"></i></a>
-                            <a href="https://jessra21.github.io/InfoCode-JessicaArroyo/" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver sitio demo"><i class="bi bi-layout-text-window-reverse"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category" data-i18n="p1-cat"> PROYECTO BLOG DE PROGRAMACIÓN </span>
-                        <h3> ArroyoCode </h3>
-                        <p data-i18n="p1-desc"> 
-                            Blog informativo sobre desarrollo de software y programación web con arquitectura responsiva 
-                            de 3 columnas, catálogo de conceptos técnicos, modales interactivos y formulario de contacto 
-                            con alertas dinámicas. 
-                        </p>
-                        <div class="tech-tags">
-                            <span> HTML5 </span> 
-                            <span> CSS3 </span>
-                            <span> JavaScript (ES6+) </span>
-                            <span> Bootstrap 5 </span>
-                            <span> GitHub </span>
-                        </div>
-                    </div>
-                </article>
+            <!-- Información Sobre Mí -->
+            <section id="about" class="glass-card about-card">
+                <h2 class="section-title" data-i18n="nav-about">Sobre Mí</h2>
+                <p class="bio" data-i18n="hero-bio">
+                    Soy <strong> Jessica Angeles Resendiz Arroyo </strong>, Ingeniera especialista en el desarrollo de soluciones web y sistemas administrativos. Combino capacidad analítica, diseño cuidado y trabajo colaborativo, con experiencia en <strong>Java, Spring Boot, PHP, JavaScript y MySQL</strong>, además de certificación en <strong>Oracle Cloud e Inteligencia Artificial</strong>. Me enfoco en crear plataformas funcionales que optimizan procesos e impulsan el crecimiento organizacional.
+                </p>
+            </section>
 
-                <!-- Proyecto 2 -->
-                <article class="glass-card project-card-modern">
-                    <div class="project-img-wrapper">
-                        <img src="assets/img/SkateBros.jpg" alt="SkateBros">
-                        <div class="project-overlay">
-                            <a href="https://github.com/JessRA21/SkateBros" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver repositorio del proyecto"><i class="bi bi-github"></i></a>
-                            <a href="https://jessra21.github.io/SkateBros/" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver sitio demo"><i class="bi bi-layout-text-window-reverse"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category" data-i18n="p2-cat"> E-COMMERCE DEPORTIVO </span>
-                        <h3> SkateBros </h3>
-                        <p data-i18n="p2-desc"> 
-                            Plataforma web para la gestión y comunidad de skate, con catálogo de productos, sistema de 
-                            registro e inicio de sesión, y una interfaz dinámica. 
-                        </p>
-                        <div class="tech-tags">
-                            <span> HTML5 </span>
-                            <span> CSS3 </span>
-                            <span> JavaScript </span>
-                            <span> Bootstrap 5 </span>
-                            <span> GitHub </span>
-                        </div>
-                    </div>
-                </article>
+            <!-- Pila Tecnológica -->
+            <section id="skills" class="glass-card skills-card">
+                <h2 class="section-title" data-i18n="skills-title"> Pila Tecnológica </h2>
+                <div class="skills-pill-container">
+                    <div class="skill-pill"><i class="bi bi-code-slash"></i> Java</div>
+                    <div class="skill-pill"><i class="bi bi-flower1"></i> Spring Boot</div>
+                    <div class="skill-pill"><i class="bi bi-filetype-php"></i> PHP</div>
+                    <div class="skill-pill"><i class="bi bi-database"></i> MySQL</div>
+                    <div class="skill-pill"><i class="bi bi-filetype-js"></i> JavaScript</div>
+                    <div class="skill-pill"><i class="bi bi-bootstrap"></i> Bootstrap 5</div>
+                    <div class="skill-pill"><i class="bi bi-git"></i> Git & GitHub</div>
+                </div>
+            </section>
 
-                <!-- Proyecto 3 -->
-                <article class="glass-card project-card-modern">
-                    <div class="project-img-wrapper">
-                        <img src="assets/img/Refactorización del Blog ArroyoCode.jpg" alt="Refactorización del Blog ArroyoCode">
-                        <div class="project-overlay">
-                            <a href="https://github.com/JessRA21/Evaluaci-n-de-Refactorizacion-del-Blog" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver repositorio del proyecto"><i class="bi bi-github"></i></a>
-                            <a href="https://jessra21.github.io/Evaluaci-n-de-Refactorizacion-del-Blog/" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver sitio demo"><i class="bi bi-layout-text-window-reverse"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category" data-i18n="p3-cat"> REFACTORIZACIÓN DE BLOG </span>
-                        <h3 data-i18n="p3-title"> Refactorización del Blog ArroyoCode </h3>
-                        <p data-i18n="p3-desc"> 
-                            Portal educativo e informativo sobre desarrollo de software refactorizado con maquetación
-                            responsiva de tres columnas, catálogo interactivo de conceptos técnicos, integración de modales 
-                            explicativos, hoja de ruta temática y formulario de contacto con validación y alertas dinámicas 
-                            descartables.
-                        </p>
-                        <div class="tech-tags">
-                            <span> HTML5 </span>
-                            <span> CSS3 </span>
-                            <span> JavaScript (ES6+) </span>
-                            <span> Bootstrap 5 </span>
-                            <span> GitHub </span>
-                        </div>
-                    </div>
-                </article>
+            <!-- Proyectos con Tarjetas Interactivas -->
+            <section id="projects" class="projects-section">
+                <h2 class="section-title text-center" data-i18n="projects-title"> Proyectos Destacados </h2>
 
-                <!-- Proyecto 4 -->
-                <article class="glass-card project-card-modern">
-                    <div class="project-img-wrapper">
-                        <img src="assets/img/Chispazo.jpg" alt="Chispazo">
-                        <div class="project-overlay">
-                            <a href="https://github.com/JessRA21/Chispazo" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver repositorio del proyecto"><i class="bi bi-github"></i></a>
-                            <a href="https://jessra21.github.io/Chispazo/" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver sitio demo"><i class="bi bi-layout-text-window-reverse"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category" data-i18n="p4-cat"> E-COMMERCE DE COMPONENTES ELECTRÓNICOS </span>
-                        <h3> Chispazo </h3>
-                        <p data-i18n="p4-desc"> 
-                            Plataforma e-commerce para la comercialización de componentes electrónicos refactorizada con 
-                            maquetación responsiva de tres columnas, catálogo interactivo con filtrado dinámico por categoría, 
-                            marca y rango de precios, integración de modales con especificaciones técnicas detalladas, hoja de 
-                            ruta para proyectos de electrónica y formulario de contacto con validación y alertas dinámicas 
-                            descartables.
-                        </p>
-                        <div class="tech-tags">
-                            <span> HTML5 </span>
-                            <span> CSS3 </span>
-                            <span> JavaScript </span>
-                            <span> Bootstrap 5 </span>
-                            <span> GitHub </span>
-                        </div>
-                    </div>
-                </article>
+                <div class="projects-asymmetric-grid">
 
-                <!-- Proyecto 5 -->
-                <article class="glass-card project-card-modern">
-                    <div class="project-img-wrapper">
-                        <img src="assets/img/Florería LOS ARROYO'S.jpg" alt="Florería LOS ARROYO'S">
-                        <div class="project-overlay">
-                            <a href="https://github.com/JessRA21/FLORERIA-LOS-ARROYO-S" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver repositorio del proyecto"><i class="bi bi-github"></i></a>
-                            <a href="https://jessra21.github.io/FLORERIA-LOS-ARROYO-S/" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver sitio demo"><i class="bi bi-layout-text-window-reverse"></i></a>
+                    <!-- Proyecto 1 -->
+                    <article class="glass-card project-card-modern">
+                        <div class="project-img-wrapper">
+                            <img src="assets/img/ArroyoCode.jpg" alt="Proyecto Blog de Programación">
+                            <div class="project-overlay">
+                                <a href="https://github.com/JessRA21/InfoCode-JessicaArroyo" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver repositorio del proyecto"><i class="bi bi-github"></i></a>
+                                <a href="https://jessra21.github.io/InfoCode-JessicaArroyo/" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver sitio demo"><i class="bi bi-layout-text-window-reverse"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category" data-i18n="p5-cat"> E-COMMERCE FLORERÍA </span>
-                        <h3> Florería LOS ARROYO'S </h3>
-                        <p data-i18n="p5-desc"> 
-                            Plataforma web para la comercialización y venta de arreglos florales, ramos y detalles especiales, 
-                            con catálogo dinámico de productos, navegación intuitiva y una interfaz optimizada para compras y 
-                            cotizaciones en línea.
-                        </p>
-                        <div class="tech-tags">
-                            <span> HTML5 </span>
-                            <span> CSS3 </span>
-                            <span> JavaScript </span>
-                            <span> Bootstrap 5 </span>
-                            <span> GitHub </span>
+                        <div class="project-info">
+                            <span class="project-category" data-i18n="p1-cat"> PROYECTO BLOG DE PROGRAMACIÓN </span>
+                            <h3> ArroyoCode </h3>
+                            <p data-i18n="p1-desc">
+                                Blog informativo sobre desarrollo de software y programación web con arquitectura responsiva
+                                de 3 columnas, catálogo de conceptos técnicos, modales interactivos y formulario de contacto
+                                con alertas dinámicas.
+                            </p>
+                            <div class="tech-tags">
+                                <span> HTML5 </span>
+                                <span> CSS3 </span>
+                                <span> JavaScript (ES6+) </span>
+                                <span> Bootstrap 5 </span>
+                                <span> GitHub </span>
+                            </div>
                         </div>
+                    </article>
+
+                    <!-- Proyecto 2 -->
+                    <article class="glass-card project-card-modern">
+                        <div class="project-img-wrapper">
+                            <img src="assets/img/SkateBros.jpg" alt="SkateBros">
+                            <div class="project-overlay">
+                                <a href="https://github.com/JessRA21/SkateBros" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver repositorio del proyecto"><i class="bi bi-github"></i></a>
+                                <a href="https://jessra21.github.io/SkateBros/" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver sitio demo"><i class="bi bi-layout-text-window-reverse"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category" data-i18n="p2-cat"> E-COMMERCE DEPORTIVO </span>
+                            <h3> SkateBros </h3>
+                            <p data-i18n="p2-desc">
+                                Plataforma web para la gestión y comunidad de skate, con catálogo de productos, sistema de
+                                registro e inicio de sesión, y una interfaz dinámica.
+                            </p>
+                            <div class="tech-tags">
+                                <span> HTML5 </span>
+                                <span> CSS3 </span>
+                                <span> JavaScript </span>
+                                <span> Bootstrap 5 </span>
+                                <span> GitHub </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 3 -->
+                    <article class="glass-card project-card-modern">
+                        <div class="project-img-wrapper">
+                            <img src="assets/img/Refactorización del Blog ArroyoCode.jpg" alt="Refactorización del Blog ArroyoCode">
+                            <div class="project-overlay">
+                                <a href="https://github.com/JessRA21/Evaluaci-n-de-Refactorizacion-del-Blog" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver repositorio del proyecto"><i class="bi bi-github"></i></a>
+                                <a href="https://jessra21.github.io/Evaluaci-n-de-Refactorizacion-del-Blog/" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver sitio demo"><i class="bi bi-layout-text-window-reverse"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category" data-i18n="p3-cat"> REFACTORIZACIÓN DE BLOG </span>
+                            <h3 data-i18n="p3-title"> Refactorización del Blog ArroyoCode </h3>
+                            <p data-i18n="p3-desc">
+                                Portal educativo e informativo sobre desarrollo de software refactorizado con maquetación
+                                responsiva de tres columnas, catálogo interactivo de conceptos técnicos, integración de modales
+                                explicativos, hoja de ruta temática y formulario de contacto con validación y alertas dinámicas
+                                descartables.
+                            </p>
+                            <div class="tech-tags">
+                                <span> HTML5 </span>
+                                <span> CSS3 </span>
+                                <span> JavaScript (ES6+) </span>
+                                <span> Bootstrap 5 </span>
+                                <span> GitHub </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 4 -->
+                    <article class="glass-card project-card-modern">
+                        <div class="project-img-wrapper">
+                            <img src="assets/img/Chispazo.jpg" alt="Chispazo">
+                            <div class="project-overlay">
+                                <a href="https://github.com/JessRA21/Chispazo" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver repositorio del proyecto"><i class="bi bi-github"></i></a>
+                                <a href="https://jessra21.github.io/Chispazo/" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver sitio demo"><i class="bi bi-layout-text-window-reverse"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category" data-i18n="p4-cat"> E-COMMERCE DE COMPONENTES ELECTRÓNICOS </span>
+                            <h3> Chispazo </h3>
+                            <p data-i18n="p4-desc">
+                                Plataforma e-commerce para la comercialización de componentes electrónicos refactorizada con
+                                maquetación responsiva de tres columnas, catálogo interactivo con filtrado dinámico por categoría,
+                                marca y rango de precios, integración de modales con especificaciones técnicas detalladas, hoja de
+                                ruta para proyectos de electrónica y formulario de contacto con validación y alertas dinámicas
+                                descartables.
+                            </p>
+                            <div class="tech-tags">
+                                <span> HTML5 </span>
+                                <span> CSS3 </span>
+                                <span> JavaScript </span>
+                                <span> Bootstrap 5 </span>
+                                <span> GitHub </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 5 -->
+                    <article class="glass-card project-card-modern">
+                        <div class="project-img-wrapper">
+                            <img src="assets/img/Florería LOS ARROYO'S.jpg" alt="Florería LOS ARROYO'S">
+                            <div class="project-overlay">
+                                <a href="https://github.com/JessRA21/FLORERIA-LOS-ARROYO-S" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver repositorio del proyecto"><i class="bi bi-github"></i></a>
+                                <a href="https://jessra21.github.io/FLORERIA-LOS-ARROYO-S/" class="icon-btn" target="_blank" rel="noopener noreferrer" title="Ver sitio demo"><i class="bi bi-layout-text-window-reverse"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category" data-i18n="p5-cat"> E-COMMERCE FLORERÍA </span>
+                            <h3> Florería LOS ARROYO'S </h3>
+                            <p data-i18n="p5-desc">
+                                Plataforma web para la comercialización y venta de arreglos florales, ramos y detalles especiales,
+                                con catálogo dinámico de productos, navegación intuitiva y una interfaz optimizada para compras y
+                                cotizaciones en línea.
+                            </p>
+                            <div class="tech-tags">
+                                <span> HTML5 </span>
+                                <span> CSS3 </span>
+                                <span> JavaScript </span>
+                                <span> Bootstrap 5 </span>
+                                <span> GitHub </span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Certificados y Constancias -->
+            <section id="certificates" class="certs-section">
+                <h2 class="section-title" data-i18n="certs-title"> Certificaciones y Constancias </h2>
+                <p class="certs-subtitle" data-i18n="certs-subtitle"> Cursos y certificaciones que respaldan mi formación y mi aprendizaje continuo. </p>
+
+                <!-- Institución: Accenture -->
+                <div class="cert-group">
+                    <h3 class="cert-group-title"><i class="bi bi-building"></i> Accenture </h3>
+                    <div class="certs-grid">
+                        <article class="glass-card cert-card">
+                            <div class="cert-thumb"><i class="bi bi-mortarboard-fill"></i></div>
+                            <div class="cert-info">
+                                <h3> Dominando el Prompting </h3>
+                                <span class="cert-date"><i class="bi bi-calendar3"></i> 01 Jul 2026 </span>
+                                <a href="assets/PDF/Accenture/certificado_Learning_to_Earning (Dominando el Prompting).pdf" class="btn-outline-rose cert-btn" target="_blank" rel="noopener noreferrer" data-i18n="cert-btn">
+                                    <i class="bi bi-patch-check-fill"></i> Ver certificado
+                                </a>
+                            </div>
+                        </article>
+                        <article class="glass-card cert-card">
+                            <div class="cert-thumb"><i class="bi bi-mortarboard-fill"></i></div>
+                            <div class="cert-info">
+                                <h3> Introducción a la IA Generativa </h3>
+                                <span class="cert-date"><i class="bi bi-calendar3"></i> 01 Jul 2026 </span>
+                                <a href="assets/PDF/Accenture/certificado_Learning_to_Earning (Introducción a la IA Generativa).pdf" class="btn-outline-rose cert-btn" target="_blank" rel="noopener noreferrer" data-i18n="cert-btn">
+                                    <i class="bi bi-patch-check-fill"></i> Ver certificado
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="glass-card cert-card">
+                            <div class="cert-thumb"><i class="bi bi-mortarboard-fill"></i></div>
+                            <div class="cert-info">
+                                <h3> Introducción Java </h3>
+                                <span class="cert-date"><i class="bi bi-calendar3"></i> 25 Jun 2026 </span>
+                                <a href="assets/PDF/Accenture/certificado_Learning_to_Earning (Introducción Java).pdf" class="btn-outline-rose cert-btn" target="_blank" rel="noopener noreferrer" data-i18n="cert-btn">
+                                    <i class="bi bi-patch-check-fill"></i> Ver certificado
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="glass-card cert-card">
+                            <div class="cert-thumb"><i class="bi bi-mortarboard-fill"></i></div>
+                            <div class="cert-info">
+                                <h3> Trabajar Online </h3>
+                                <span class="cert-date"><i class="bi bi-calendar3"></i> 03 Ago 2026 </span>
+                                <a href="assets/PDF/Accenture/certificado_Learning_to_Earning (Trabajar Online).pdf" class="btn-outline-rose cert-btn" target="_blank" rel="noopener noreferrer" data-i18n="cert-btn">
+                                    <i class="bi bi-patch-check-fill"></i> Ver certificado
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="glass-card cert-card">
+                            <div class="cert-thumb"><i class="bi bi-mortarboard-fill"></i></div>
+                            <div class="cert-info">
+                                <h3> Navega de Forma Segura en Internet </h3>
+                                <span class="cert-date"><i class="bi bi-calendar3"></i> 01 Jul 2026 </span>
+                                <a href="assets/PDF/Accenture/certificado_Learning_to_Earning (Navega de Forma Segura en Internet).pdf" class="btn-outline-rose cert-btn" target="_blank" rel="noopener noreferrer" data-i18n="cert-btn">
+                                    <i class="bi bi-patch-check-fill"></i> Ver certificado
+                                </a>
+                            </div>
+                        </article>
+
                     </div>
-                </article>
+                </div>
 
-            </div>
-        </section>
+                <!-- Institución: Cisco -->
+                <div class="cert-group">
+                    <h3 class="cert-group-title"><i class="bi bi-building"></i> Cisco </h3>
+                    <div class="certs-grid">
+                        <article class="glass-card cert-card">
+                            <div class="cert-thumb"><i class="bi bi-router-fill"></i></div>
+                            <div class="cert-info">
+                                <h3> Gestión de Amenazas Cibernéticas </h3>
+                                <span class="cert-date"><i class="bi bi-calendar3"></i> 20 Nov 2024 </span>
+                                <a href="assets/PDF/Cisco/Cisco Networking Academy (Gestión de Amenazas Cibernéticas).pdf" class="btn-outline-rose cert-btn" target="_blank" rel="noopener noreferrer" data-i18n="cert-btn">
+                                    <i class="bi bi-patch-check-fill"></i> Ver certificado
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
 
-        <!-- Sección de Contacto -->
+                <!-- Institución: Grasshopper -->
+                <div class="cert-group">
+                    <h3 class="cert-group-title"><i class="bi bi-building"></i> Grasshopper </h3>
+                    <div class="certs-grid">
+                        <article class="glass-card cert-card">
+                            <div class="cert-thumb"><i class="bi bi-code-slash"></i></div>
+                            <div class="cert-info">
+                                <h3> Fundamentos de codificación II </h3>
+                                <span class="cert-date"><i class="bi bi-calendar3"></i> Mes Año </span>
+                                <a href="assets/PDF/Grasshopper/Grasshopper - (Fundamentos de codificación II).pdf" class="btn-outline-rose cert-btn" target="_blank" rel="noopener noreferrer" data-i18n="cert-btn">
+                                    <i class="bi bi-patch-check-fill"></i> Ver certificado
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Institución: Oracle -->
+                <div class="cert-group">
+                    <h3 class="cert-group-title"><i class="bi bi-building"></i> Oracle </h3>
+                    <div class="certs-grid">
+                        <article class="glass-card cert-card">
+                            <div class="cert-thumb"><i class="bi bi-cloud-check-fill"></i></div>
+                            <div class="cert-info">
+                                <h3> Certificación en Fundamentos de Oracle Cloud Infrastructure 2025 </h3>
+                                <span class="cert-date"><i class="bi bi-calendar3"></i> 12 Nov 2025 </span>
+                                <a href="assets/PDF/Oracle/eCertificate (Certified Foundations Associate).pdf" class="btn-outline-rose cert-btn" target="_blank" rel="noopener noreferrer" data-i18n="cert-btn">
+                                    <i class="bi bi-patch-check-fill"></i> Ver certificado
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="glass-card cert-card">
+                            <div class="cert-thumb"><i class="bi bi-cpu-fill"></i></div>
+                            <div class="cert-info">
+                                <h3> Certificación Profesional en Inteligencia Artificial Generativa de Oracle Cloud Infrastructure 2025 </h3>
+                                <span class="cert-date"><i class="bi bi-calendar3"></i> 03 Oct 2025 </span>
+                                <a href="assets/PDF/Oracle/eCertificate (Certified Generative Al Professional).pdf" class="btn-outline-rose cert-btn" target="_blank" rel="noopener noreferrer" data-i18n="cert-btn">
+                                    <i class="bi bi-patch-check-fill"></i> Ver certificado
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="glass-card cert-card">
+                            <div class="cert-thumb"><i class="bi bi-cpu-fill"></i></div>
+                            <div class="cert-info">
+                                <h3> Certificación en Fundamentos de Inteligencia Artificial de Oracle Cloud Infrastructure 2025 </h3>
+                                <span class="cert-date"><i class="bi bi-calendar3"></i> 29 Sep 2025 </span>
+                                <a href="assets/PDF/Oracle/eCertificate (Certified Al Foundations Associate).pdf" class="btn-outline-rose cert-btn" target="_blank" rel="noopener noreferrer" data-i18n="cert-btn">
+                                    <i class="bi bi-patch-check-fill"></i> Ver certificado
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="glass-card cert-card">
+                            <div class="cert-thumb"><i class="bi bi-cpu-fill"></i></div>
+                            <div class="cert-info">
+                                <h3> Certificación en Fundamentos de Oracle Data Platform 2025 </h3>
+                                <span class="cert-date"><i class="bi bi-calendar3"></i> 29 Sep 2025 </span>
+                                <a href="assets/PDF/Oracle/eCertificate (Oracle Data Platform 2025 Certified Foundations Associate).pdf" class="btn-outline-rose cert-btn" target="_blank" rel="noopener noreferrer" data-i18n="cert-btn">
+                                    <i class="bi bi-patch-check-fill"></i> Ver certificado
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="glass-card cert-card">
+                            <div class="cert-thumb"><i class="bi bi-cpu-fill"></i></div>
+                            <div class="cert-info">
+                                <h3> Certificación en Fundamentos de Oracle Cloud Infrastructure 2024 </h3>
+                                <span class="cert-date"><i class="bi bi-calendar3"></i> 28 Ene 2025 </span>
+                                <a href="assets/PDF/Oracle/eCertificate (2024 Certified Foundations Associate).pdf" class="btn-outline-rose cert-btn" target="_blank" rel="noopener noreferrer" data-i18n="cert-btn">
+                                    <i class="bi bi-patch-check-fill"></i> Ver certificado
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- Institución: Santander -->
+                <div class="cert-group">
+                    <h3 class="cert-group-title"><i class="bi bi-building"></i> Santander </h3>
+                    <div class="certs-grid">
+                        <article class="glass-card cert-card">
+                            <div class="cert-thumb"><i class="bi bi-award-fill"></i></div>
+                            <div class="cert-info">
+                                <h3> Fundamentos de Nube AWS </h3>
+                                <span class="cert-date"><i class="bi bi-calendar3"></i> 30 Mar 2025 </span>
+                                <a href="assets/PDF/Santander/Santander - (Fundamentos de Nube AWS).pdf" class="btn-outline-rose cert-btn" target="_blank" rel="noopener noreferrer" data-i18n="cert-btn">
+                                    <i class="bi bi-patch-check-fill"></i> Ver constancia
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="glass-card cert-card">
+                            <div class="cert-thumb"><i class="bi bi-award-fill"></i></div>
+                            <div class="cert-info">
+                                <h3> Fundamentos de ChatGPT </h3>
+                                <span class="cert-date"><i class="bi bi-calendar3"></i> 08 Ago 2025 </span>
+                                <a href="assets/PDF/Santander/Santander Open Academy - (Fundamentos de ChatGPT).pdf" class="btn-outline-rose cert-btn" target="_blank" rel="noopener noreferrer" data-i18n="cert-btn">
+                                    <i class="bi bi-patch-check-fill"></i> Ver certificado
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="glass-card cert-card">
+                            <div class="cert-thumb"><i class="bi bi-award-fill"></i></div>
+                            <div class="cert-info">
+                                <h3> Pensamiento crítico y resolución de problemas </h3>
+                                <span class="cert-date"><i class="bi bi-calendar3"></i> 29 Abr 2025 </span>
+                                <a href="assets/PDF/Santander/Santander Open Academy - (Pensamiento crítico y resolución de problemas).pdf" class="btn-outline-rose cert-btn" target="_blank" rel="noopener noreferrer" data-i18n="cert-btn">
+                                    <i class="bi bi-patch-check-fill"></i> Ver certificado
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Sección de Contacto (ancho completo) -->
         <section id="contact" class="glass-card contact-card">
             <div class="contact-grid">
-                
+
                 <!-- Columna Izquierda: Frase e Invitación -->
                 <div class="contact-quote-wrapper">
                     <span class="quote-tagline" data-i18n="contact-quote-tagline">HABLEMOS DE PROYECTOS</span>
@@ -237,7 +452,7 @@
                     <p class="quote-text" data-i18n="contact-quote-text">
                         Si buscas una desarrolladora Full Stack apasionada por la innovación, las buenas prácticas y la optimización de procesos, ¡me encantaría colaborar contigo!
                     </p>
-                    
+
                     <div class="contact-direct-info">
                         <div class="info-item">
                             <i class="bi bi-chat-quote-fill"></i>
@@ -250,7 +465,7 @@
                 <div class="contact-form-wrapper">
                     <h2 class="section-title text-start" data-i18n="contact-title"> Contáctame </h2>
                     <p class="contact-subtitle text-start" data-i18n="contact-subtitle"> Comparte tu correo electrónico y tu mensaje aquí para empezar a colaborar. </p>
-                    
+
                     <form id="contact-form" class="contact-form">
                         <div class="form-group">
                             <label for="user-email" data-i18n="label-email"><i class="bi bi-envelope"></i> Tu correo electrónico</label>
@@ -275,11 +490,11 @@
 
     <footer class="footer-minimal">
         <div class="row text-center small text-white-50 pt-1">
-            <div class="col-12 mb-1">
-                Desarrollado con <i class="bi bi-heart-fill text-danger mx-2"></i> por:
+            <div class="col-12">
+                Desarrollado con <i class="bi bi-heart-fill text-danger mx-1"></i> por <span class="fw-bold text-white">Jessica Angeles Resendiz Arroyo</span>
             </div>
-            <div class="col-12" data-i18n="footer">
-                &copy; 2026 Desarrollado con elegancia & tecnología. Todos los derechos reservados.
+            <div class="col-12 mb-1">
+                &copy; 2026 MI PORTAFOLIO. Todos los derechos reservados.
             </div>
         </div>
     </footer>

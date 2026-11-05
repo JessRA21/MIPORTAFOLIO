@@ -49,6 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 "btn-github": "GitHub",
                 "skills-title": "Pila Tecnológica",
                 "projects-title": "Proyectos Destacados",
+                "nav-certs": "Certificaciones",
+                "certs-title": "Certificaciones y Constancias",
+                "certs-subtitle": "Cursos y certificaciones que respaldan mi formación y mi aprendizaje continuo.",
+                "cert-btn": "Ver certificado",
                 "p1-cat": "PROYECTO BLOG DE PROGRAMACIÓN",
                 "p1-desc": "Blog informativo sobre desarrollo de software y programación web con arquitectura responsiva de 3 columnas, catálogo de conceptos técnicos, modales interactivos y formulario de contacto con alertas dinámicas.",
                 "p2-cat": "E-COMMERCE DEPORTIVO",
@@ -85,6 +89,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 "btn-github": "GitHub",
                 "skills-title": "Tech Stack",
                 "projects-title": "Featured Projects",
+                "nav-certs": "Certifications",
+                "certs-title": "Certifications & Certificates",
+                "certs-subtitle": "Courses and certifications that support my training and my continuous learning.",
+                "cert-btn": "View certificate",
                 "p1-cat": "PROGRAMMING BLOG PROJECT",
                 "p1-desc": "Informative blog about software development and web programming featuring a responsive 3-column architecture, technical concepts catalog, interactive modals, and contact form with dynamic alerts.",
                 "p2-cat": "SPORTS E-COMMERCE",
@@ -236,6 +244,65 @@ document.addEventListener('DOMContentLoaded', () => {
                     submitBtn.innerHTML = originalBtnText;
                 });
         });
+    }
+
+    // =====================================================
+    // 4. CERTIFICADOS: MOSTRAR 2 POR INSTITUCIÓN + BOTÓN "VER MÁS"
+    // =====================================================
+    const CERTS_VISIBLES = 2;
+    const certLabels = {
+        es: { more: 'Ver más', less: 'Ver menos' },
+        en: { more: 'Show more', less: 'Show less' }
+    };
+
+    const certToggles = [];
+
+    document.querySelectorAll('.cert-group .certs-grid').forEach((grid) => {
+        const cards = Array.from(grid.querySelectorAll('.cert-card'));
+        if (cards.length <= CERTS_VISIBLES) return;
+
+        // Los certificados a partir del tercero quedan ocultos
+        cards.slice(CERTS_VISIBLES).forEach((card) => card.classList.add('cert-extra'));
+
+        const wrap = document.createElement('div');
+        wrap.className = 'cert-more-wrap';
+
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'btn-outline-rose cert-more-btn';
+        btn.setAttribute('aria-expanded', 'false');
+        btn.innerHTML = '<span class="cert-more-text"></span><i class="bi bi-chevron-down"></i>';
+
+        wrap.appendChild(btn);
+        grid.insertAdjacentElement('afterend', wrap);
+
+        btn.addEventListener('click', () => {
+            const open = grid.classList.toggle('is-expanded');
+            btn.classList.toggle('is-open', open);
+            btn.setAttribute('aria-expanded', String(open));
+            updateCertToggleLabels();
+        });
+
+        certToggles.push({ grid, btn });
+    });
+
+    function updateCertToggleLabels() {
+        const lang = localStorage.getItem('portfolio-lang') || 'es';
+        const labels = certLabels[lang] || certLabels.es;
+        certToggles.forEach(({ grid, btn }) => {
+            const text = btn.querySelector('.cert-more-text');
+            if (text) {
+                text.textContent = grid.classList.contains('is-expanded') ? labels.less : labels.more;
+            }
+        });
+    }
+
+    updateCertToggleLabels();
+
+    // Al cambiar el idioma, actualizar también el texto de los botones
+    const langBtnCerts = document.getElementById('lang-toggle');
+    if (langBtnCerts) {
+        langBtnCerts.addEventListener('click', updateCertToggleLabels);
     }
 
 });
