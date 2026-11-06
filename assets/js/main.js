@@ -326,6 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     const MES_INDICE = { ene: 0, feb: 1, mar: 2, abr: 3, may: 4, jun: 5, jul: 6, ago: 7, sep: 8, set: 8, oct: 9, nov: 10, dic: 11 };
 
+    // "05 Nov 2026" / "5 de noviembre de 2026" -> { day: '05', month: 10, year: '2026' }
     function parseFechaEs(text) {
         const m = /(\d{1,2})\s+(?:de\s+)?([A-Za-zÁÉÍÓÚáéíóúñÑ]+)\.?,?\s+(?:de\s+)?(\d{4})/.exec(text || '');
         if (!m) return null;
@@ -375,10 +376,16 @@ document.addEventListener('DOMContentLoaded', () => {
             grid.insertAdjacentElement('afterend', wrap);
 
             btn.addEventListener('click', () => {
+                const topAntes = btn.getBoundingClientRect().top;
                 const open = grid.classList.toggle('is-expanded');
                 btn.classList.toggle('is-open', open);
                 btn.setAttribute('aria-expanded', String(open));
                 renderCerts(localStorage.getItem('portfolio-lang') || 'es');
+                if (!open) {
+                    // Al contraer, mantener el botón en el mismo lugar de la pantalla
+                    const topDespues = btn.getBoundingClientRect().top;
+                    window.scrollBy({ top: topDespues - topAntes, left: 0, behavior: 'instant' });
+                }
             });
         }
 
