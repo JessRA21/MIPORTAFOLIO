@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "certs-subtitle": "Cursos y certificaciones que respaldan mi formación y mi aprendizaje continuo.",
                 "cert-btn": "Ver certificado",
                 "const-btn": "Ver constancia",
+                "badge-btn": "Ver insignia",
 
                 /* Traducciones de la sección de contacto */
                 "contact-quote-tagline": "HABLEMOS DE PROYECTOS",
@@ -132,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "certs-subtitle": "Courses and certifications that support my training and my continuous learning.",
                 "cert-btn": "View certificate",
                 "const-btn": "View proof of completion",
+                "badge-btn": "View badge",
 
                 /* Traducciones de la sección de contacto */
                 "contact-quote-tagline": "LET'S TALK PROJECTS",
